@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Shield, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import CONFIG from "@/app-config";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
             <Shield className="h-8 w-8 text-green-500" />
-            <span className="text-xl font-bold">CyberGuard</span>
+            <span className="text-xl font-bold">{CONFIG.appName}</span>
           </Link>
 
           {/* Desktop Menu */}
