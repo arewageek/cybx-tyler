@@ -51,12 +51,12 @@ const CONFIG: IConfig = {
     { field: "Clients", value: 10 },
   ],
   contact: {
-    tel: { long: "", short: "" },
+    tel: { long: "+1 (585) 606-8655", short: "+15856068655" },
     instagram: {
       username: "tylertech",
-      url: "https://www.instagram.com/tylertech",
+      url: "https://www.instagram.com/tylertech200/profilecard/?igsh=MXN4dWNzNWVsMnI1MQ==",
     },
-    whatsapp: "330303",
+    whatsapp: "https://wa.link/3bugce",
     email: "",
   },
 };
