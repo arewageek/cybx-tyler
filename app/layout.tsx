@@ -9,7 +9,7 @@ import { Footer } from '@/components/footer';
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'CyberGuard Solutions',
+  title: 'Tyler Tech0 Solutions',
   description: 'Advanced Cybersecurity Services for Modern Threats',
   icons: {
     icon: '/favicon.ico',
