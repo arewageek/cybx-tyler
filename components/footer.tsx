@@ -1,8 +1,15 @@
+"use client"
+
 import { Shield } from "lucide-react";
 import Link from "next/link";
 
+import FloatingChatButton from "@/components/FloatingChatButton"
+import CONFIG from "@/app-config";
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const { email, tel, whatsapp, instagram } = CONFIG.contact
 
   return (
     <footer className="bg-black/50 border-t border-green-500/20 py-12">
@@ -76,8 +83,8 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>contact@cyberguard.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>{email}</li>
+              <li>{tel.long}</li>
               <li>123 Security Street</li>
               <li>Cyber City, CS 12345</li>
             </ul>
@@ -88,6 +95,23 @@ export function Footer() {
           <p>© {currentYear} CyberGuard Solutions. All rights reserved.</p>
         </div>
       </div>
+
+      <FloatingChatButton
+        platform="whatsapp"
+        handle={tel.short}
+        message="Hi there! 👋"
+        // bottom={8}
+        label="Chat on WhatsApp"
+      />
+
+      {/* Instagram Example */}
+      {/* <FloatingChatButton
+        platform="instagram"
+        handle={instagram.username}
+        label="Message on Instagram"
+        primaryColor="#E1306C"
+        secondaryColor="#C13584"
+      /> */}
     </footer>
   );
 }
